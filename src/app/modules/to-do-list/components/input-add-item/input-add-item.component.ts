@@ -1,9 +1,8 @@
 
 import { ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, Output, ViewChild, inject } from '@angular/core';
+import {  NgClass, NgIf } from '@angular/common';
 
 //Interface
-
-import { JsonPipe, NgClass, NgIf } from '@angular/common';
 import { IListItems } from '../../interface/iListItems.interface';
 
 @Component({
