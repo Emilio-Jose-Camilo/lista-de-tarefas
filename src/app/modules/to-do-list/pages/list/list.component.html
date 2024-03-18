@@ -5,9 +5,21 @@
   @if(addItem()){
   <button class="btn btn-primary" (click)="addItem.set(false)">Crie uma lista de tarefas</button>
   } @else {
-  <app-input-add-item (outputAddListItems)="getInputAndAddItem($event)" [inputListItems]="getListItems()" />
+  <app-input-add-item 
+    (outputAddListItems)="getInputAndAddItem($event)" 
+    [inputListItems]="getListItems()" 
+  />
   }
 </div>
 } @else {
-<app-input-add-item (outputAddListItems)="getInputAndAddItem($event)" [inputListItems]="getListItems()" />
+  <app-input-add-item 
+    (outputAddListItems)="getInputAndAddItem($event)" 
+    [inputListItems]="getListItems()" 
+  />
+
+  <main class="container"></main>
+
+  <footer>
+    <button class="btn btn-danger" (click)="deleteAllItems()">Deletar todos os itens</button>
+  </footer>
 }
