@@ -18,11 +18,15 @@
   />
 
   <main class="container">
-    <h2>Pendências</h2>
-    <app-input-list-item  [inputListItems]="getListItems()" />
+    @if (listItemStage('pending').length) {
+      <h2>Pendências</h2>
+      <app-input-list-item  [inputListItems]="listItemStage('pending')" />
+    }
 
-    <h2>Comcluídas</h2>
-    <app-input-list-item  [inputListItems]="getListItems()" />
+    @if (listItemStage('completed').length) {
+      <h2>Comcluídas</h2>
+      <app-input-list-item  [inputListItems]="listItemStage('completed')" />
+    }
   </main>
 
   <footer>
