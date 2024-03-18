@@ -1,12 +1,15 @@
-import { ChangeDetectorRef, Component, ElementRef, EventEmitter, Output, ViewChild, inject } from '@angular/core';
+
+import { ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, Output, ViewChild, inject } from '@angular/core';
 
 //Interface
+
+import { JsonPipe, NgClass, NgIf } from '@angular/common';
 import { IListItems } from '../../interface/iListItems.interface';
 
 @Component({
   selector: 'app-input-add-item',
   standalone: true,
-  imports: [],
+  imports: [NgClass, NgIf],
   templateUrl: './input-add-item.component.html',
   styleUrl: './input-add-item.component.scss'
 })
@@ -15,8 +18,9 @@ export class InputAddItemComponent {
   #cdr = inject(ChangeDetectorRef);
   @ViewChild("inputText") public inputText!: ElementRef;
 
-  @Output() public outputAddListItems = new EventEmitter<IListItems>();
+  @Input({ required: true }) public inputListItems: Array<IListItems> = [];
 
+  @Output() public outputAddListItems = new EventEmitter<IListItems>();
   public focusAndAddItem(value: string) {
     if(value) {
       this.#cdr.detectChanges();

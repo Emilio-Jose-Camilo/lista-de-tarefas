@@ -15,8 +15,8 @@ import { IListItems } from '../../interface/iListItems.interface';
 export class ListComponent {
   public addItem = signal(true);
 
-  #setListItems = signal<IListItems[]>([this.#parseItems()]);
-  getListItems = this.#setListItems.asReadonly();
+  #setListItems = signal<IListItems[]>(this.#parseItems());
+  public getListItems = this.#setListItems.asReadonly();
 
   #parseItems() {
     return JSON.parse(localStorage.getItem('@my-list') || '[]')
@@ -24,7 +24,8 @@ export class ListComponent {
 
   public getInputAndAddItem(value: IListItems) {
     localStorage.setItem(
-      '@my-list', JSON.stringify([value])
+      '@my-list', JSON.stringify([...this.#setListItems(), value])
     )
+    return this.#setListItems.set(this.#parseItems());
   }
 }
