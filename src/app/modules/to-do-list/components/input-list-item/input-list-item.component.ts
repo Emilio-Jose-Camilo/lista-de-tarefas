@@ -25,4 +25,10 @@ export class InputListItemComponent {
   public UpdateItemText(id: string, value: string) {
     this.outputUpdateItemText.emit({id, value})
   }
+
+  @Output() public outputDeleteItem = new EventEmitter<string>();
+
+  public deleteItem(id: string) {
+    this.outputDeleteItem.emit(id)
+  }
 }

@@ -1,27 +1,48 @@
-# ListaDeTarefas
+# Lista de Tarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+Organize suas tarefas diárias
 
-## Development server
+## índice
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- <a href="#layout">Layout</a>
+- <a href="#Demonstracao">Demonstraçao</a>
+- <a href="#rodar">Como rodar o projeto?</a>
+- <a href="#tecnologias">Tecnologias Utilizadas</a>
+- <a href="#autor">Autor</a>
 
-## Code scaffolding
+## Layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![imagem 1](./src/assets/imagens-readme/img5.png)
+![imagem 2](./src/assets/imagens-readme/img1.png)
+![imagem 3](./src/assets/imagens-readme/img2.png)
+![imagem 4](./src/assets/imagens-readme/img3.png)
+![imagem 5](./src/assets/imagens-readme/img4.png)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Demonstraçao
 
-## Running unit tests
+[Link demonstração]()
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como rodar o projeto?
 
-## Running end-to-end tests
+```bash
+# Clone este repositório
+$ git clone linkrepo
+# Acessa a pasta do projeto no seu teminal
+$ cd lista-de-tarefas
+# execute o comando npm install
+$ use o comando ng server para rodar a aplicação na porta  http://localhost:4200/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
 
-## Further help
+## 🛠Tecnologias Utilizadas
+1. [html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+2. [scss](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+2. [Angular 17](https://angular.dev/)
+2. [Sweetalert2](https://sweetalert2.github.io/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autor 
+
+![Emílio José Camilo](./src/assets/imagens-readme/perfil/foto%20curriculo_resized%20(1).jpeg)
+
+[linkedIn](https://www.linkedin.com/in/emilio-jos%C3%A9-794955208/)
