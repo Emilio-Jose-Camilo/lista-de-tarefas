@@ -23,6 +23,7 @@
       <app-input-list-item  
         [inputListItems]="listItemStage('pending')" 
         (outputUpdateItemChecked)="updateItemCheckbox($event)"  
+        (outputUpdateItemText)="updateItemText($event)"
       />
     }
 
@@ -31,11 +32,17 @@
       <app-input-list-item  
         [inputListItems]="listItemStage('completed')" 
         (outputUpdateItemChecked)="updateItemCheckbox($event)" 
+        (outputUpdateItemText)="updateItemText($event)"
       />
     }
   </main>
 
   <footer>
-    <button class="btn btn-danger" (click)="deleteAllItems()">Deletar todos os itens</button>
+    <button 
+      class="btn btn-danger" 
+      (click)="deleteAllItems()"
+    >
+      Deletar todos os itens
+    </button>
   </footer>
 }
